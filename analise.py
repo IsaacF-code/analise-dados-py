@@ -7,10 +7,12 @@ base_csv = st.file_uploader("Escolha as 2 bases para análise", accept_multiple_
 
 if base_csv != None:
     for file in base_csv:
-        bytes_data = base_csv.getvalue()
+        bytes_data = file.getvalue()
         string_data = StringIO(bytes_data.decode("UTF-8"))
         base = pd.read_csv(string_data)
 
-        st.header("Prévia dos dados - {file.name}")
+        st.header(f"Prévia dos dados - {file.name}")
         base
+
+    st.sidebar.header("Filtros")
     
