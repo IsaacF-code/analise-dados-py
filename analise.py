@@ -15,4 +15,9 @@ if base_csv != None:
         base
 
     st.sidebar.header("Filtros")
-    
+
+    st.sidebar.selectbox(
+        "Ano",
+        index=None,
+        placeholder="Data"
+    )    
