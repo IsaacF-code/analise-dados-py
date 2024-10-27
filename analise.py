@@ -41,6 +41,7 @@ if base_csv != None:
 
         base_filtrada_vg = base[base['Year'].dt.to_period('Y').astype(str) == ano_selecionado]
         
+        # Agrupando ano e nome da base vgsales
         data_nome = base_filtrada_vg.groupby(['Year', 'Name']).reset()
 
 
